@@ -1,2 +1,2 @@
 # pureschedule
-Scheduling app
+Appointments scheduling software

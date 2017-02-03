@@ -1,0 +1,40 @@
+<template name="dashboard">
+    <div class='row'>
+        <div class='col-md-12 col-centered schedule-title'>
+            Book a Skype Meeting with Marco Schwartz (CET times)
+        </div>
+    </div>
+    <div class='row'>
+    {{#each slots}}{{> clientSlot}}{{/each}}
+    </div>
+    <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-8 voffset30'>
+            <input id='purpose' class='form-control input-lg' placeholder="Purpose of the meeting ...">
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-3 voffset15'>
+            <input id='name' class='form-control input-lg' placeholder="Your name ...">
+        </div>
+        <div class='col-md-3 voffset15'>
+            <input id='email' class='form-control input-lg' placeholder="Your email ...">
+        </div>
+        <div class='col-md-2 voffset15'>
+            <input id='skype' class='form-control input-lg' placeholder="Your Skype ID ...">
+        </div>
+    </div>
+    <div class='row voffset15'>
+        <div class='col-md-2'></div>
+        {{#if slotSelected}}
+        <div class='col-md-8'>
+            <button id='book' class="btn btn-lg btn-block btn-primary">Book a Meeting</button>
+        </div>
+        {{else}}
+        <div class='col-md-8'>
+            <button class="btn btn-lg btn-block btn-primary disabled">Book a Meeting</button>
+        </div>
+        {{/if}}
+    </div>
+</template>

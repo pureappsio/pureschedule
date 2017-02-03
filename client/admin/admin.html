@@ -1,0 +1,63 @@
+<template name="admin">
+    {{#if isAdmin}}
+    <h3>Slots</h3>
+    <div class='row'>
+        <div class='col-md-3'>
+            <select id='day' class='form-control'>
+                <option value='1'>Monday</option>
+                <option value='2'>Tuesday</option>
+                <option value='3'>Wednesday</option>
+                <option value='4'>Thursday</option>
+                <option value='5'>Friday</option>
+            </select>
+        </div>
+        <div class='col-md-1'>
+            <select id='start-hour' class='form-control'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+            </select>
+        </div>
+        <div class='col-md-1'>
+            <select id='start-period' class='form-control'>
+                <option value='am'>AM</option>
+                <option value='pm'>PM</option>
+            </select>
+        </div>
+        <div class='col-md-1'>
+            <select id='end-hour' class='form-control'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+            </select>
+        </div>
+        <div class='col-md-1'>
+            <select id='end-period' class='form-control'>
+                <option value='am'>AM</option>
+                <option value='pm'>PM</option>
+            </select>
+        </div>
+        <div class='col-md-3'>
+            <button id='create-slot' class='btn btn-primary'>Create Slot</button>
+        </div>
+    </div>
+    {{#each slots}} {{> slot}} {{/each}}
+    
+    <h3>Meetings</h3>
+
+    {{#each meetings}} {{> meeting}} {{/each}} 
+
+    {{/if}}
+</template>
